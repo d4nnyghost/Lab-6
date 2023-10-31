@@ -2,6 +2,7 @@
 def encode(password):
     pw = []
     encoded_pass = []
+    string_pass = ""
     for value in password:
         pw.append(int(value))
     for digit in pw:
@@ -9,7 +10,9 @@ def encode(password):
         if digit >= 10:
             digit -= 10
         encoded_pass.append(digit)
-    return encoded_pass
+    for value in encoded_pass:
+        string_pass += str(value)
+    return string_pass
 
 def menu():
     print("Menu")
@@ -29,7 +32,3 @@ while __name__ == "__main__":
 
         if choice == "2":
             pass
-
-
-
-
