@@ -32,3 +32,10 @@ while __name__ == "__main__":
 
         if choice == "2":
             pass
+def decoder(integer_string):
+    decoded = ''.join(str(int(digit) - 3) for digit in integer_string)
+    return decoded
+
+
+num = input("enter num: ")
+print(f"{decoder(num)}")
