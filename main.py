@@ -1,4 +1,4 @@
-# Christian Valkanov
+git# Christian Valkanov
 def encode(password):
     pw = []
     encoded_pass = []
@@ -31,9 +31,21 @@ while __name__ == "__main__":
             print("Your password has been encoded and stored!\n")
             break
 
+<<<<<<< HEAD
         elif choice == "2":
             decoded_pass = decode(encoded_pass)
             print(f"The encoded password is {encoded_pass}, and the original password is {decoded_pass}")
 
         elif choice != "3":
             print("Error: invalid option")
+=======
+        if choice == "2":
+            pass
+def decoder(integer_string):
+    decoded = ''.join(str(int(digit) - 3) for digit in integer_string)
+    return decoded
+
+
+num = input("enter num: ")
+print(f"{decoder(num)}")
+>>>>>>> f0bc74962acf56cc2ca5ec8ef4a45469fc21df1b
