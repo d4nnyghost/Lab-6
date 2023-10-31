@@ -1,4 +1,4 @@
-git# Christian Valkanov
+# Christian Valkanov
 def encode(password):
     pw = []
     encoded_pass = []
@@ -14,6 +14,10 @@ def encode(password):
         string_pass += str(value)
     return string_pass
 
+def decoder(integer_string):
+    decoded = ''.join(str(int(digit) - 3) for digit in integer_string)
+    return decoded
+
 def menu():
     print("Menu")
     print("-------------")
@@ -22,7 +26,7 @@ def menu():
 while __name__ == "__main__":
     menu()
     choice = ""
-    while choice != "3":
+    while True:
         choice = input("Please enter an option: ")
 
         if choice == "1":
@@ -31,21 +35,21 @@ while __name__ == "__main__":
             print("Your password has been encoded and stored!\n")
             break
 
-<<<<<<< HEAD
         elif choice == "2":
-            decoded_pass = decode(encoded_pass)
-            print(f"The encoded password is {encoded_pass}, and the original password is {decoded_pass}")
+            decoded_pass = decoder(encoded_pass)
+            print(f"The encoded password is {encoded_pass}, and the original password is {decoded_pass}.")
 
-        elif choice != "3":
-            print("Error: invalid option")
-=======
-        if choice == "2":
-            pass
-def decoder(integer_string):
-    decoded = ''.join(str(int(digit) - 3) for digit in integer_string)
-    return decoded
+        elif choice == "3":
+            __name__ = "wrong"
+            break
+
+        else:
+            print("\nError: invalid option\n")
+            break
 
 
-num = input("enter num: ")
-print(f"{decoder(num)}")
->>>>>>> f0bc74962acf56cc2ca5ec8ef4a45469fc21df1b
+
+
+
+
+
