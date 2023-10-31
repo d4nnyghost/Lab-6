@@ -1,4 +1,4 @@
-# Christian Valkanov
+git# Christian Valkanov
 def encode(password):
     pw = []
     encoded_pass = []
